@@ -1,0 +1,87 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.top-bar{
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+}
+.top-bar button{
+    margin: 5px 1px;
+    padding: 7.5px 15px;
+    cursor: pointer;
+    color: white;
+    border-radius: 20px;
+}
+input[type="color"] {
+	-webkit-appearance: none;
+	border: none;
+	width: 32px;
+    height: 32px;
+    margin: 0 5px;
+}
+input[type="color"]::-webkit-color-swatch-wrapper {
+	padding: 0;
+}
+input[type="color"]::-webkit-color-swatch {
+	border: none;
+}
+
+#brush-size {
+    -webkit-appearance: none;
+    width: 20vw;
+    height: 25px;
+    background: #2f2f2f;
+    outline: none;
+    opacity: 0.25;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+#brush-size:hover {
+    opacity: 0.75;
+}
+#brush-size::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    background: #02a8f3;
+    cursor: pointer;
+}
+  
+#brush-size::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    background: #2095f2;
+    cursor: pointer;
+}
+
+#btncaptura{
+    background-color: #dd1a5e;
+}
+#undo-btn{
+    background-color: #456aae;
+}
+#clear-btn{
+    background-color: #6c6d72;
+}
+#draw{
+    cursor: crosshair;
+    display: block;
+    width: 100%;
+    height: 100vh;
+}
+#contcanvas{
+    text-align: center;
+}
+#contcanvas canvas{
+    width: 95%;
+    text-align: center;
+    padding: 5px;
+    box-shadow: 3px 5px 10px rgba(0,0,0,1);
+}

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <title>Odontograma</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="top-bar">
+        <button id="btncaptura" class="badge badge-dark" style="border:none;">Guardar</button>
+        <button id="undo-btn" class="badge badge-warning" style="border:none;">Regresar</button>
+        <button id="clear-btn" class="badge badge-danger" style="border:none;">Borrar</button>
+        <input type="color" value="#FF0000" id="color-picker">
+        <input type="range" id="brush-size" min="1" max="100" value="2">
+    </div>
+    <div class="contenedor">
+        <canvas id="draw"></canvas>
+        <div id="contcanvas"></div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.5.0-beta4/html2canvas.js"></script>
+    <script src="funciones.js"></script>
+</body>
+</html>
