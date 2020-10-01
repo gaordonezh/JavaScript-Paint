@@ -77,20 +77,8 @@ function init(){
     }).mousemove(function (e){
         if (brush.down)
         mouseEvent(e);
-    }).touchmove(function(e){
-        brush.down = true;
-        currentStroke = {
-        color: brush.color,
-        size: brush.size,
-        points: [],
-        };
-
-        strokes.push(currentStroke);
-
-        mouseEvent(e);
     });
-
-
+    
     $('#undo-btn').click(function(){
         strokes.pop();
         redraw();
