@@ -37,7 +37,7 @@ function redraw(){
     }
 }
 
-    function init(){
+function init(){
     canvas = $('#draw');
     canvas.attr({
         width: window.innerWidth,
@@ -77,7 +77,20 @@ function redraw(){
     }).mousemove(function (e){
         if (brush.down)
         mouseEvent(e);
+    }).touchmove(function(e){
+        brush.down = true;
+        currentStroke = {
+        color: brush.color,
+        size: brush.size,
+        points: [],
+        };
+
+        strokes.push(currentStroke);
+
+        mouseEvent(e);
     });
+
+
     $('#undo-btn').click(function(){
         strokes.pop();
         redraw();
